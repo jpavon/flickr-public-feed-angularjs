@@ -1,4 +1,4 @@
-# Flickr Public Feed
+# Flickr Public Feed AngularJS
 
 ### Built using AngularJS and Browserify.
 
@@ -8,7 +8,7 @@
 
 Clone the repo:
 
-	git clone https://github.com/jpavon/flickr-public-feed.git
+	git clone https://github.com/jpavon/flickr-public-feed-angularjs.git
 
 Change directory:
 
