@@ -12,7 +12,7 @@ Clone the repo:
 
 Change directory:
 
-	cd flickr-public-feed
+	cd flickr-public-feed-angularjs
 
 Install npm dependencies:
 
