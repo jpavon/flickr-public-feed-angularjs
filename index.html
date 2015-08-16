@@ -1,0 +1,97 @@
+<!doctype html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Flickr Public Feed</title>
+
+	<!-- build:css assets/css/style.min.css -->
+	<link rel="stylesheet" href="assets/_/css/style.css">
+	<!-- /build -->
+</head>
+<body ng-app="app">
+
+	<div class="main-title">
+		<h1>Flickr Public Feed</h1>
+		<p>Using AngularJS and Browserify. <a href="https://github.com/jpavon/flickr-public-feed-angularjs">Github Repo</a>.</p>
+	</div>
+
+	<main id="main" class="main" role="main">
+		<ng-view></ng-view>
+	</main>
+
+
+
+
+
+
+
+	<script type="text/ng-template" id="index.html">
+		<div class="images">
+			<div class="image" ng-repeat="image in images">
+				<div class="image__media" style="background-image: url('{{ image.media.m }}')"></div>
+
+				<div class="image__content">
+
+					<h2 class="image__title">
+						<a href="#/images/{{ images.indexOf(image) }}">{{ image.title || 'No title provided.' }}</a>
+					</h2>
+
+					<ul class="image__info">
+						<li>
+							<a class="btn" href="{{ image.author_id | authorUrl }}" target="_blank">Photo author</a>
+						</li>
+						<li>
+							{{ image.published | dateFormat }}
+						</li>
+						<li>
+							<a class="btn" href="{{ image.link }}" target="_blank">View on Flickr</a>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/ng-template" id="show.html">
+		<div class="image">
+			<a class="btn image__btn-back" href="#/">Back</a>
+
+			<h2 class="image__title m-r2">
+				<a href="{{ image.link }}" target="_blank">{{ image.title || 'No title provided.' }}</a>
+			</h2>
+
+			<ul class="image__info">
+				<li>
+					<a class="btn" href="{{ image.author_id | authorUrl }}" target="_blank">Photo author</a>
+				</li>
+				<li>
+					{{ image.published | dateFormat }}
+				</li>
+			</ul>
+
+			<div class="cf m-t1">
+				<div class="image__media" style="background-image: url('{{ image.media.m }}')"></div>
+
+				<div class="image__content">
+					<div class="image__tags">
+						<div class="m-b1">
+							{{ image.description | cleanDescription }}
+						</div>
+
+						<h4>Tags:</h4>
+						<div ng-bind-html="image.tags | tagsLinks"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</script>
+
+	<!-- build:js assets/js/app.min.js -->
+	<script src="assets/_/js/app.js"></script>
+	<!-- /build -->
+</body>
+</html>

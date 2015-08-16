@@ -1,0 +1,42 @@
+{
+  "name": "angularjs-browserify-flickr-feed",
+  "title": "AngularJS & Browserify Flickr Feed",
+  "homepage": "http://jpavon.github.io/flickr-public-feed-angularjs/",
+  "description": "",
+  "version": "0.0.1",
+  "author": {
+    "url": "http://jpavon.com"
+  },
+  "devDependencies": {
+    "angular": "^1.4.4",
+    "angular-route": "^1.4.4",
+    "angular-sanitize": "^1.4.4",
+    "browserify": "^11.0.0",
+    "grunt": "~0.4.5",
+    "grunt-autoprefixer": "~3.0.3",
+    "grunt-banner": "^0.4.0",
+    "grunt-browser-sync": "~2.1.3",
+    "grunt-browserify": "^3.8.0",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-concat": "~0.5.1",
+    "grunt-contrib-copy": "~0.8.0",
+    "grunt-contrib-cssmin": "~0.12.3",
+    "grunt-contrib-uglify": "~0.9.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-gh-pages": "^0.10.0",
+    "grunt-processhtml": "^0.3.8",
+    "grunt-sass": "^1.0.0",
+    "handlebars": "^3.0.3",
+    "hbsfy": "^2.2.1",
+    "jit-grunt": "^0.9.1",
+    "jquery": "^2.1.4",
+    "matchdep": "~0.3.0",
+    "moment": "^2.10.3",
+    "node-uuid": "^1.4.3",
+    "trim": "0.0.1"
+  },
+  "keywords": [],
+  "dependencies": {
+    "time-grunt": "latest"
+  }
+}
